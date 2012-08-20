@@ -1,0 +1,56 @@
+development:
+  facebook:
+    key: 136087493200583
+    secret:	c24e83e6fa9049e872019f2a047e9e8f
+  twitter:
+      key: 111
+      secret: 111
+  vkontakte:
+      key: 3087304
+      secret: DZEujcI61tTdcfJYnSoS
+  google:
+      key: 111
+      secret: 111
+  mail_adress: smtp.gmail.com
+  mail_port: 587
+  mail_domain: http://communalpayments.herokuapp.com/
+  mail_username: tormozoid48@gmail.com
+  mail_password: tormozoid
+
+test:
+  facebook:
+    key: 136087493200583
+    secret:	c24e83e6fa9049e872019f2a047e9e8f
+  twitter:
+      key: 111
+      secret: 111
+  vkontakte:
+      key: 3087304
+      secret: DZEujcI61tTdcfJYnSoS
+  google:
+      key: 111
+      secret: 111
+  mail_adress: smtp.gmail.com
+  mail_port: 587
+  mail_domain: http://communalpayments.herokuapp.com/
+  mail_username: tormozoid48@gmail.com
+  mail_password: tormozoid
+
+production:
+  facebook:
+    key: 136087493200583
+    secret:	c24e83e6fa9049e872019f2a047e9e8f
+  twitter:
+      key: 111
+      secret: 111
+  vkontakte:
+      key: 3087304
+      secret: DZEujcI61tTdcfJYnSoS
+  google:
+      key: 111
+      secret: 111
+  mail_adress: smtp.gmail.com
+  mail_port: 587
+  mail_domain: http://communalpayments.herokuapp.com/
+  mail_username: tormozoid48@gmail.com
+  mail_password: tormozoid
