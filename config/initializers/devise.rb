@@ -57,9 +57,9 @@ Devise.setup do |config|
   # config.router_name = :my_engine
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 
-  config.omniauth :facebook, APP_CONFIG["facebook"]["key"], APP_CONFIG["facebook"]["secret"]
-  config.omniauth :twitter, APP_CONFIG["twitter"]["key"], APP_CONFIG["twitter"]["secret"]
-  config.omniauth :vkontakte, APP_CONFIG["vkontakte"]["key"], APP_CONFIG["vkontakte"]["secret"]
-  config.omniauth :google_oauth2, APP_CONFIG["google"]["key"], APP_CONFIG["google"]["secret"], :name => 'google'
+  config.omniauth :facebook, 136087493200583, "c24e83e6fa9049e872019f2a047e9e8f"
+  config.omniauth :twitter, 111, "111"
+  config.omniauth :vkontakte, 3087304, "DZEujcI61tTdcfJYnSoS"
+  config.omniauth :google_oauth2, 111, "111", :name => 'google'
 
 end
