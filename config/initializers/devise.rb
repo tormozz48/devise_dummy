@@ -60,6 +60,6 @@ Devise.setup do |config|
   config.omniauth :facebook, 136087493200583, "c24e83e6fa9049e872019f2a047e9e8f"
   config.omniauth :twitter, 111, "111"
   config.omniauth :vkontakte, 3087304, "DZEujcI61tTdcfJYnSoS"
-  config.omniauth :google_oauth2, 111, "111", :name => 'google'
+  #config.omniauth :google_oauth2, 111, "111", :name => 'google'
 
 end

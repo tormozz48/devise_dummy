@@ -6,3 +6,37 @@ ru:
 
   application:
     name: "Коммунальные услуги"
+
+  top_menu:
+    home: "Главная"
+    about: "О программе"
+    contacts: "Контакты"
+
+  field:
+    email: "Email"
+    password: "Пароль"
+    password_confirm: "Подтверждение пароля"
+    rememberme: "Запомнить меня"
+
+  button:
+    sign_in: "Войти"
+    sign_up: "Зарегистрировать нового пользователя"
+
+  link:
+     sign_in: "Вернуться на страницу логина"
+     sign_up: "Регистрация"
+     forgot_password: "Забыли пароль?"
+     did_not_receive_confirmation_instructions: "Не получили письма с подтверждением?"
+     did_not_receive_unlock_instructions: "Не получили инструкций для разблокирования?"
+
+  activerecord:
+     errors:
+        models:
+          user:
+            attributes:
+              email:
+                blank: "не может быть пустым"
+              password:
+                blank: "Пароль не может быть пустым"
+                confirmation: "Пароли не совпадают"
+                too_short: "Длина пароля должна быть больше 6 символов"
