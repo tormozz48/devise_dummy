@@ -1,17 +1,23 @@
-<h2>Sign in</h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+<%= form_for resource, :as => resource_name, :url => session_path(resource_name), :html => {:id => "signInFormID", :class=> "well"} do |f| %>
+  <%= f.label t('field.email')%>
+  <%= f.email_field :email %>
+  <%= f.label t('field.password') %>
+  <%= f.password_field :password %>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <label class="checkbox">
+        <%= f.check_box :remember_me %> <%=t('field.rememberme')%>
+    </label>
   <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+  <%= render "devise/shared/links" %>
+  <div id="formButtonsWrapperID">
+    <%- if devise_mapping.omniauthable? %>
+        <%- resource_class.omniauth_providers.each do |provider| %>
+            <%= link_to image_tag("icons/social/#{provider}.png", :title=>"Sign In With #{provider}"), omniauth_authorize_path(resource_name, provider) %>
+        <% end -%>
+    <% end -%>
+    <%= f.submit t('button.sign_in'), :class =>"btn btn-primary" %>
+  </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+

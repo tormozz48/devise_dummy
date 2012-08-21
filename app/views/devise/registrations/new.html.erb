@@ -1,18 +1,49 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:id => "signInFormID", :class=> "well"}) do |f| %>
+  <div class="alert alert-error">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <%= devise_error_messages! %>
+  </div>
+  <div <% if resource.errors[:email].present? %>
+            class="control-group error"
+       <%elsif resource.errors.any?%>
+            class="control-group success"
+       <%else%>
+            class="control-group"
+       <% end %>>
+    <%= f.label t('field.email'), :class => "control-label" %>
+    <div class="controls">
+        <%= f.email_field :email %>
+    </div>
+  </div>
+  <div <% if resource.errors[:password].present? %>
+            class="control-group error"
+       <%elsif resource.errors.any?%>
+            class="control-group success"
+       <%else%>
+            class="control-group"
+       <% end %>>
+    <%= f.label t('field.password'), :class => "control-label" %>
+    <div class="controls">
+        <%= f.password_field :password %>
+    </div>
+  </div>
+  <div <% if resource.errors[:password_confirmation].present? %>
+            class="control-group error"
+       <%elsif resource.errors.any?%>
+            class="control-group success"
+       <%else%>
+            class="control-group"
+       <% end %>>
+    <%= f.label t('field.password_confirm'), :class => "control-label" %>
+    <div class="controls">
+        <%= f.password_field :password_confirmation %>
+    </div>
+  </div>
+  <div>
+    <%= render "devise/shared/links" %>
+  </div>
+  <div id="formButtonsWrapperID">
+    <%= f.submit t('button.sign_up'), :class =>"btn btn-primary" %>
+  </div>
 <% end %>
 
-<%= render "devise/shared/links" %>

@@ -1,11 +1,22 @@
 body {
-  background-color: #fff;
+  padding-top: 40px;
+  /*background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 18px; */
 }
 
+#signInFormID{
+  margin-top: 20px;
+  width: 300px;
+}
+
+#formButtonsWrapperID{
+  margin-top: 5px;
+}
+
+/*
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -67,3 +78,4 @@ div {
     list-style: square;
   }
 }
+*/
