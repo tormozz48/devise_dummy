@@ -1,44 +1,63 @@
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:id => "signInFormID", :class=> "well"}) do |f| %>
-  <div class="alert alert-error">
-    <a class="close" data-dismiss="alert" href="#">×</a>
-    <%= devise_error_messages! %>
-  </div>
-  <div <% if resource.errors[:email].present? %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:id => "signUpFormID", :class=> "well"}) do |f| %>
+   
+   <!--email field-->
+   <div <% if resource.errors[:email].present? %>
             class="control-group error"
        <%elsif resource.errors.any?%>
             class="control-group success"
        <%else%>
             class="control-group"
        <% end %>>
-    <%= f.label t('field.email'), :class => "control-label" %>
-    <div class="controls">
-        <%= f.email_field :email %>
-    </div>
-  </div>
-  <div <% if resource.errors[:password].present? %>
+        <%= f.label t('field.email'), :class => "control-label" %>
+        <div class="controls">
+            <%= f.email_field :email %>
+            <% if resource.errors[:email].present? %>
+                <% resource.errors[:email].each do |msg|%>
+                    <p class="help-block"><%= msg%></p>
+                <%end%>
+            <%end%>
+        </div>
+   </div>
+  
+   <!--password field-->
+   <div <% if resource.errors[:password].present? %>
             class="control-group error"
-       <%elsif resource.errors.any?%>
+        <%elsif resource.errors.any?%>
             class="control-group success"
-       <%else%>
+        <%else%>
             class="control-group"
-       <% end %>>
-    <%= f.label t('field.password'), :class => "control-label" %>
-    <div class="controls">
-        <%= f.password_field :password %>
-    </div>
-  </div>
-  <div <% if resource.errors[:password_confirmation].present? %>
+        <% end %>>
+        <%= f.label t('field.password'), :class => "control-label" %>
+        <div class="controls">
+            <%= f.password_field :password %>
+            <% if resource.errors[:password].present? %>
+                <% resource.errors[:password].each do |msg|%>
+                    <p class="help-block"><%= msg%></p>
+                <%end%>
+            <%end%>
+        </div>
+   </div>
+
+   <!--password confirmation field-->
+   <div <% if resource.errors[:password_confirmation].present? %>
             class="control-group error"
-       <%elsif resource.errors.any?%>
+        <%elsif resource.errors.any?%>
             class="control-group success"
-       <%else%>
+        <%else%>
             class="control-group"
-       <% end %>>
-    <%= f.label t('field.password_confirm'), :class => "control-label" %>
-    <div class="controls">
-        <%= f.password_field :password_confirmation %>
-    </div>
-  </div>
+        <% end %>>
+        <%= f.label t('field.password_confirm'), :class => "control-label" %>
+        <div class="controls">
+            <%= f.password_field :password_confirmation %>
+            <% if resource.errors[:password_confirmation].present? %>
+                <% resource.errors[:password_confirmation].each do |msg|%>
+                    <p class="help-block"><%= msg%></p>
+                <%end%>
+            <%end%>
+        </div>
+   </div>
+
+  <!--device shared links-->
   <div>
     <%= render "devise/shared/links" %>
   </div>

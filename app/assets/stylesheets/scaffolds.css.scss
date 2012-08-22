@@ -7,9 +7,13 @@ body {
   line-height: 18px; */
 }
 
-#signInFormID{
+#signInFormID, #signUpFormID, #forgotPasswordFormID{
   margin-top: 20px;
   width: 300px;
+}
+
+#forgotPasswordFormID{
+  width: 320px;
 }
 
 #formButtonsWrapperID{
