@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
+  layout "secure"
   before_filter :authenticate_user!, :only => [:index, :edit, :update]
 
   def index
-    @user = User.all
+    @users = User.all
   end
 
   #go to edit user profile

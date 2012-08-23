@@ -1,18 +1,18 @@
 body {
-  padding-top: 40px;
-  /*background-color: #fff;
+  padding-top: 60px;
+  background-color: #555 !important;
+  /*
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; */
 }
 
-#signInFormID, #signUpFormID, #forgotPasswordFormID{
-  margin-top: 20px;
+#signInFormID, #signUpFormID{
   width: 300px;
 }
 
-#forgotPasswordFormID{
+#forgotPasswordFormID, #confirmationPasswordFormID, #unlockFormID{
   width: 320px;
 }
 

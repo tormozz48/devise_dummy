@@ -1,12 +1,27 @@
-<h2>Resend unlock instructions</h2>
-
-<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.submit "Resend unlock instructions" %></div>
+<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => {:id => "unlockFormID", :class=> "well", :method => :post }) do |f| %>
+    <!--email field-->
+    <div <% if resource.errors[:email].present? %>
+         class="control-group error"
+         <%elsif resource.errors.any?%>
+         class="control-group success"
+         <%else%>
+         class="control-group"
+         <% end %>>
+      <%= f.label t('field.email'), :class => "control-label" %>
+      <div class="controls">
+        <%= f.email_field :email %>
+        <% if resource.errors[:email].present? %>
+            <% resource.errors[:email].each do |msg|%>
+                <p class="help-block"><%= msg%></p>
+            <%end%>
+        <%end%>
+      </div>
+    </div>
+    <div>
+      <%= render "devise/shared/links" %>
+    </div>
+    <div id="formButtonsWrapperID">
+      <%= f.submit t('button.send_letter_with_unlock'), :class =>"btn btn-primary" %>
+    </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
