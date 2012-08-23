@@ -12,6 +12,36 @@ ru:
     about: "О программе"
     contacts: "Контакты"
 
+  sidebar_menu:
+    group:
+      general: "Общая информация"
+      tariffs: "Тарифы"
+      records: "Платежи"
+      account_setting: "Настройки учетной записи"
+    item:
+      general: "Общая информация"
+      tariff:
+        flat_abonent: "Тарифы по квартплате"
+        electricity: "Тарифы на электроэнергию"
+        water:
+          cold: "Тарифы на холодную воду"
+          hot: "Тарифы на горячую воду"
+        heating: "Тарифы на отопление"
+        intercom: "Тарифы на домофон"
+        internet: "Тарифы на интернет"
+      record:
+        flat_abonent: "Абонентская квартплата"
+        electricity: "Расход электроэнергии"
+        water:
+          cold: "Расход холодной воды"
+          hot: "Расход горячей воды"
+        heating: "Расход отопления"
+        intercom: "Оплата домофона"
+        internet: "Оплата услуг интернет"
+      settings: "Настройки учетной записи"
+
+
+
   field:
     email: "Email"
     password: "Пароль"
@@ -21,6 +51,9 @@ ru:
   button:
     sign_in: "Войти"
     sign_up: "Зарегистрировать нового пользователя"
+    send_letter_with_instructions: "Выслать письмо с инструкциями по смене пароля"
+    send_letter_with_confirmation: "Выслать письмо с подтверждением регистрации"
+    send_letter_with_unlock: "Выслать письмо с инструкциями по разблокировке"
 
   link:
      sign_in: "Вернуться на страницу логина"
@@ -35,7 +68,7 @@ ru:
           user:
             attributes:
               email:
-                blank: "не может быть пустым"
+                blank: "Email не может быть пустым"
               password:
                 blank: "Пароль не может быть пустым"
                 confirmation: "Пароли не совпадают"

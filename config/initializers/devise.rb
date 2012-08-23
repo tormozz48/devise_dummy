@@ -57,9 +57,10 @@ Devise.setup do |config|
   # config.router_name = :my_engine
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 
-  config.omniauth :facebook, 136087493200583, "c24e83e6fa9049e872019f2a047e9e8f"
-  config.omniauth :twitter, 111, "111"
-  config.omniauth :vkontakte, 3087304, "DZEujcI61tTdcfJYnSoS"
+  #config.omniauth :facebook, "136087493200583", "c24e83e6fa9049e872019f2a047e9e8f", :strategy_class => OmniAuth::Strategies::Facebook, :client_options => {:ssl => {:ca_path => '#{Rails.root}/config'}}
+  config.omniauth :facebook, "136087493200583", "c24e83e6fa9049e872019f2a047e9e8f", :strategy_class => OmniAuth::Strategies::Facebook
+  config.omniauth :twitter, "JxgPPjdJyj8Z9UkHPaM6w", "BaHbQcQp3pTsy3QGiqZVfj6h8260fecpfTFG7Qwk50"
+  config.omniauth :vkontakte, "3087304", "DZEujcI61tTdcfJYnSoS"
   #config.omniauth :google_oauth2, 111, "111", :name => 'google'
 
 end
