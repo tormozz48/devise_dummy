@@ -16,6 +16,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-vkontakte'
+gem 'omniauth-google-oauth2'
 #gem 'twitter-bootstrap-rails'
 
 

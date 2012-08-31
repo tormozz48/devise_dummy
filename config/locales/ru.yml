@@ -69,6 +69,7 @@ ru:
             attributes:
               email:
                 blank: "Email не может быть пустым"
+                taken: "Такой Email уже используется"
               password:
                 blank: "Пароль не может быть пустым"
                 confirmation: "Пароли не совпадают"

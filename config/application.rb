@@ -28,20 +28,5 @@ module Communal2
     config.assets.enabled = true
     config.assets.initialize_on_precompile = false
     config.assets.version = '1.0'
-
-    #mail configuration
-    config.action_mailer.default_url_options = { :host => 'localhost:8081' }
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.perform_deliveries = true
-    config.action_mailer.raise_delivery_errors = true
-    config.action_mailer.default :charset => "utf-8"
-    config.action_mailer.smtp_settings = {
-        :address              => "smtp.gmail.com",
-        :port                 => 587,
-        :domain               => 'communalpayments.herokuapp.com',
-        :user_name            => 'tormozoid48@gmail.com',
-        :password             => 'tormozoid',
-        :authentication       => 'plain',
-        :enable_starttls_auto => true  }
   end
 end

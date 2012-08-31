@@ -5,7 +5,7 @@ ru:
     messages:
       expired: "устарела. Пожалуйста, запросите новую"
       not_found: "не найдена"
-      already_confirmed: "уже подтверждена. Пожалуйста, попробуйте войти в систему"
+      already_confirmed: "Учетная запись уже подтверждена. Пожалуйста, попробуйте войти в систему"
       not_locked: "не заблокирована"
       not_saved: "Ошибка"
 
@@ -47,10 +47,10 @@ ru:
     omniauth_callbacks:
       success: "Вход в систему выполнен с учётной записью из %{kind}."
       failure: "Вы не можете войти в систему с учётной записью из %{kind}, т.к. \"%{reason}\"."
-    mailer:
-      confirmation_instructions:
-        subject: "Инструкции по подтверждению учётной записи"
-      reset_password_instructions:
-        subject: "Инструкции по восстановлению пароля"
-      unlock_instructions:
-        subject: "Инструкции по разблокировке учётной записи"
+    #mailer:
+      #confirmation_instructions:
+        #subject: "Инструкции по подтверждению учётной записи"
+      #reset_password_instructions:
+        #subject: "Инструкции по восстановлению пароля"
+      #unlock_instructions:
+        #subject: "Инструкции по разблокировке учётной записи"
